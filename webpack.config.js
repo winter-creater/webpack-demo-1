@@ -1,6 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
+
 module.exports = {
     mode: 'development',
     //入口文件
@@ -15,4 +16,12 @@ module.exports = {
         // filename: 'assets/admin.html',//转译的文件目录
         template: './src/assets/index.html'//本地文件路径
     })],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
 };
