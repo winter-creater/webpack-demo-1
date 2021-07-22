@@ -4,8 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack serve",
-    "build": "rm -rf dist && npx webpack",
+    "start": "webpack server",
+    "build": "rm -rf dist && npx webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
