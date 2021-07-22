@@ -11,6 +11,10 @@ module.exports = {
         //filename: 'index.js',//转译出口文件
         filename: '[name].[contenthash].js'
     },
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
+    },
     plugins: [new HtmlWebpackPlugin({
         title: 'My App',
         // filename: 'assets/admin.html',//转译的文件目录
