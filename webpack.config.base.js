@@ -24,8 +24,30 @@ module.exports = {
         }),
     ],
 
-    // module: {
-    //     rules: [
-    //     ],
-    // },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            implementation: require('dart-sass')
+                        }
+                    },
+                ],
+            },
+            {
+                test: /\.less$/i,
+                use: [
+                    // compiles Less to CSS
+                    "style-loader",
+                    "css-loader",
+                    "less-loader",
+                ],
+            },
+        ],
+    },
 };
