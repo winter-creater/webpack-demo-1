@@ -39,6 +39,7 @@ module.exports = {
                     },
                 ],
             },
+
             {
                 test: /\.less$/i,
                 use: [
@@ -48,6 +49,25 @@ module.exports = {
                     "less-loader",
                 ],
             },
+
+            {
+                test: /\.styl$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "stylus-loader",
+                ],
+                // compiles Styl to CSS
+            },
+
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                loader: "file-loader",
+
+
+            },
+
+
         ],
     },
 };
