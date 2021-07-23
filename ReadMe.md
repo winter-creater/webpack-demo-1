@@ -18,5 +18,9 @@ node_modules
 ```
  mv dist/* ./
 ```
+##### 删除dist目录
+```
+rm -rf dist
+```
 ##### 上传到github
 ##### 开启github page预览
